@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      android:versionCode="%%%VERSION_CODE%%%"
+      android:versionName="%%%VERSION_NAME%%%" package="%%%PACKAGE_NAME%%%">
+    <uses-sdk android:minSdkVersion="7" android:targetSdkVersion="17" />
+
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:resizeable="true" android:normalScreens="true" android:smallScreens="true"></supports-screens>
+    <uses-permission android:name="android.permission.CAMERA"></uses-permission>
+    <uses-permission android:name="android.permission.VIBRATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"></uses-permission>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"></uses-permission>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"></uses-permission>
+    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_CONTACTS"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="%%%PACKAGE_NAME%%%.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <permission android:name="%%%PACKAGE_NAME%%%.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+
+    <uses-feature android:name="android.hardware.location.network" android:required="false" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" android:required="false" />
+    <uses-feature android:name="android.hardware.location" android:required="false" />
+    <uses-feature android:name="android.hardware.location.gps" android:required="false" />
+    <uses-feature android:name="android.hardware.touchscreen" android:required="false" />
+
+    <application android:hardwareAccelerated="false" android:icon="@drawable/icon" android:label="%%%APPLICATION_NAME%%%" android:name="mobi.monaca.framework.MonacaApplication">
+        <service android:name="%%%PACKAGE_NAME%%%.GCMIntentService" />
+        <receiver android:name="com.google.android.gcm.GCMBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+        <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="%%%PACKAGE_NAME%%%" />
+        </intent-filter>
+        </receiver>
+
+        <activity android:name="mobi.monaca.framework.MonacaNotificationActivity" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale">
+        </activity>
+
+        <activity android:name="mobi.monaca.framework.MonacaSplashActivity"
+                  android:label="%%%APPLICATION_NAME%%%"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:screenOrientation="unspecified">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name="mobi.monaca.framework.MonacaActivity"
+                  android:label="MonacaActivity"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:screenOrientation="unspecified">
+        </activity>
+        <activity android:name="mobi.monaca.framework.MonacaPageActivity"
+                  android:label="MonacaPageActivity"
+                  android:theme="@android:style/Theme.NoTitleBar"
+                  android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|uiMode"
+                  android:screenOrientation="unspecified">
+        </activity>
+
+        <activity
+                  android:name="com.google.zxing.client.android.CaptureActivity"
+                  android:configChanges="orientation|keyboardHidden"
+                  android:exported="false"
+                  android:screenOrientation="landscape"
+                  android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+                  android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+
+        <activity
+                  android:name="com.google.zxing.client.android.encode.EncodeActivity"
+                  android:label="@string/share_name" >
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,14 @@
+{
+    "title-ja": "",
+    "title-en": "Todo App",
+    "description-ja": "",
+    "description-en": "",
+    "category": "template",
+    "platform": [
+        "android",
+        "ios",
+        "winrt"
+    ],
+    "name": "generated-20131126023158-529386f97e21933a7e0f709d",
+    "version": 1
+}

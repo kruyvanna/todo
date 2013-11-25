@@ -1,0 +1,11 @@
+{
+    "plugins": [
+
+    ],
+    "splash": {
+        "android": {
+            "background": "#cccccc"
+        }
+    },
+    "version": "1.0"
+}
