@@ -1,7 +1,11 @@
 {
-    "plugins": [
-
-    ],
+    "plugins": {
+        "jQuery": {
+            "jquery-js": [
+                "jquery-min.js"
+            ]
+        }
+    },
     "splash": {
         "android": {
             "background": "#cccccc"

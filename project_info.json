@@ -1,6 +1,6 @@
 {
-    "title-ja": "",
-    "title-en": "Todo App",
+    "title-ja": "Todo App Template",
+    "title-en": "",
     "description-ja": "",
     "description-en": "",
     "category": "template",
@@ -9,6 +9,6 @@
         "ios",
         "winrt"
     ],
-    "name": "generated-20131126023158-529386f97e21933a7e0f709d",
+    "name": "generated-20131126050345-5293aaa57e2193b745c16eb6",
     "version": 1
 }
