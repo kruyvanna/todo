@@ -1,14 +1,14 @@
 {
-    "title-ja": "Todo App Template",
-    "title-en": "",
+    "title-ja": "Todo App Template for Workshop",
+    "title-en": "Todo App Template for Workshop",
     "description-ja": "",
-    "description-en": "",
+    "description-en": "This is sample application for PhoneGap workshop about AngularJS and Topcoat",
     "category": "template",
     "platform": [
         "android",
         "ios",
         "winrt"
     ],
-    "name": "generated-20131126050345-5293aaa57e2193b745c16eb6",
+    "name": "todo-2013-11-25",
     "version": 1
 }
